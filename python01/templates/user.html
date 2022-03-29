@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}
-    LOGIN
+    USER
 {% endblock %}
 
 
-{% block content %}
+    {% block content %}
 
     {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -15,11 +15,5 @@
         {% endif %}
     {% endwith %}
 
-        <form action="#" method="post">
-            <p>Login: </p>
-            <input type="text" name="login">
-            <input type="submit" name="zaloguj">
-        </form>
-
-        <img src="static/icon.png" alt="icon">
+    <p>WITAJ {{user}}</p>
 {% endblock %}
