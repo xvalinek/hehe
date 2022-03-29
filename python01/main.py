@@ -22,6 +22,7 @@ def login():
         return render_template("login.html")
 
 sranie w banie
+hujemuje
 
 @app.route("/user")
 def podstrona():
