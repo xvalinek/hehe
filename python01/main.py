@@ -3,7 +3,7 @@ from datetime import timedelta
 
 app = Flask(__name__)
 app.secret_key = "chuj"
-app.permanent_session_lifetime = timedelta(minute=5)
+
 
 @app.route("/")
 def home():
@@ -21,8 +21,9 @@ def login():
             return redirect(url_for("podstrona"))
         return render_template("login.html")
 
-sranie w banie
-hujemuje
+@app.route("/idk")
+def idk():
+    return render_template("dupa.html")
 
 @app.route("/user")
 def podstrona():
