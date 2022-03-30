@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title%} 
+To do list 
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for task in tasks %}
+            <li calss="list-group-item">{{ task.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <form action="" method="POST">
+        <input type="text" name="task"><br>
+        <input type="submit" value="Dodaj!">
+    </form>
+    
+
+{% endblock %}
