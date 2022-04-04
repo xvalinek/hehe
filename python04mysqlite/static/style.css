@@ -1,0 +1,40 @@
+body{
+    background-color: #ba5c5c;
+}
+#gradient{
+    height: 800px;
+    clear: both;
+    background-image: linear-gradient(to bottom right, #F08080, #FFA07A);
+}   
+input[type=button], input[type=submit], input[type=reset] { 
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;    
+    cursor: pointer;
+  }
+  input[type=text] {
+    background-color: #0bd98e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;  
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100px;
+  }
+  body {
+    text-align: center;
+}
+form, li {
+    display: inline-block;
+}
+input, li{
+    
+    font-size: 20px;
+}
+form{
+    margin-top: 100px;
+} 

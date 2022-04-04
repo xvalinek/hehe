@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title%}LISTA UŻYTKOWNIKÓW{% endblock %}
+{% block content %}
+<h1>LISTA UŻYTKOWNIKÓW</h1>
+{% for i in lista %}
+    
+    <li>Login: {{i.login}}       Email: {{i.email}}       Password: {{i.password}}</li><br>
+{% endfor %}
+{% endblock %}
