@@ -1,0 +1,40 @@
+body{
+    background-color: #92A8D1;
+}
+header{
+    background-color: #5B5EA6;
+    height: 100px;
+    margin: 0%;
+    
+}
+#strona{
+    float: left;
+    position: relative;
+    left: 41%;
+    margin: 31px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+button {
+    background-color: #3e3f72; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;  
+    font-size: 16px;
+    margin: 20px 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    height: 60px;
+    float: right; 
+  }
+  
+button:hover {
+    background-color: #91a4c7; 
+    color: black;     
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  } 
+video{
+    position: absolute;
+}
