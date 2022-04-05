@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title%}STRONA GŁÓWNA{% endblock %}
+{% block content %}
+        <header>
+            <p id="strona">STRONA GŁÓWNA</p>
+            <button type="button" onclick="window.location.href='{{ url_for( 'register' ) }}';" name="buttreg">Register</button>
+            <button type="button" onclick="window.location.href='{{ url_for( 'loginPage' ) }}';" name="buttlog">Login</button>
+        </header>
+
+            
+        
+{% endblock %}  
