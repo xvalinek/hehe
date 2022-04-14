@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title%}LISTA UŻYTKOWNIKÓW{% endblock %}
+{% block content %}
+<h1>INFORMACJE</h1>
+
+{% for i in lista %}
+    
+    <li>Nazwa: {{i.nazwa}}       Cena: {{i.cena}}       Ilość: {{i.ilosc}}       Wartość Całkowita: {{i.wartosc_calkowita}}</li><br>
+{% endfor %}
+
+    <button type="button" onclick="window.location.href='{{ url_for( 'index' ) }}';" name="buttreg">Strona Główna</button>
+    SUMA: {{suma}}
+{% endblock %}

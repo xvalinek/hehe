@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title%}STRONA GŁÓWNA{% endblock %}
+{% block content %}
+        <header>
+        </header>
+        <body>
+            <p id="strona">STRONA GŁÓWNA</p>
+            <form method="POST" action=""> 
+                    <input list="nazwaa" name="nazwa" id="essa" placeholder="Wybierz">
+                    <datalist id="nazwaa">
+                    <option value="OŚMIORNICZKA">
+                    <option value="DUŻA OŚMIORNICZKA">
+                    <option value="KRÓLICZEK">
+                    <option value="ŻÓŁWIK">
+                    <option value="AXOLOTL">
+                    <option value="DINOZAUR">
+                    <option value="WIELORYB">
+                    </datalist> 
+                    <br>
+                 <input type="number" name="cena" placeholder="Cena" />
+                <br>
+                 <input type="number" name="ilosc" placeholder="Ilość" />
+                <br>
+                <input type="submit">
+               
+            </form>
+
+        
+                <button type="button" onclick="window.location.href='{{ url_for( 'info' ) }}';" name="buttreg">Informacje</button>
+
+            </body> 
+
+{% endblock %}  
