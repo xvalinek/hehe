@@ -13,12 +13,16 @@ class szydelko(db.Model):
     cena = db.Column("cena", db.Integer)
     ilosc = db.Column("ilosc", db.Integer)
     wartosc_calkowita = db.Column("wc", db.Integer)
+    kasaplus = db.Column("kasaplus", db.Integer)
+    kasaminus = db.Column("kasaminus", db.Integer)
 
-    def __init__(self, nazwa, cena, ilosc, wartosc_calkowita):
+    def __init__(self, nazwa, cena, ilosc, wartosc_calkowita, kasaplus, kasaminus):
         self.nazwa = nazwa
         self.cena = cena
         self.ilosc = ilosc
         self.wartosc_calkowita = wartosc_calkowita
+        self.kasaplus = kasaplus
+        self.kasaminus = kasaminus
 
 @app.route("/", methods=["POST", "GET"])
 def index():
@@ -26,12 +30,16 @@ def index():
         nazwa = request.form["nazwa"]
         cena = request.form["cena"]
         ilosc = request.form["ilosc"]
+        kasaplus = request.form["kasaplus"]
+        kasaminus = request.form["kasaminus"]
         
         if nazwa:
             cena = int(cena)
             ilosc = int(ilosc)
+            kasaplus = int(kasaplus)
+            kasaminus = int(kasaminus)
             w_c = cena*ilosc
-            lgn = szydelko(nazwa, cena, ilosc, w_c)
+            lgn = szydelko(nazwa, cena, ilosc, w_c, kasaplus, kasaminus)
             db.session.add(lgn)
             db.session.commit()
             return render_template("index.html")
@@ -43,9 +51,11 @@ def index():
 def info():
     lista = szydelko.query.all()
     suma = db.session.query(db.func.sum(szydelko.wartosc_calkowita)).scalar()
-    return render_template("info.html", lista=lista, suma=suma)
+    kasaminus = db.session.query(db.func.sum(szydelko.kasaminus)).scalar()
+    kasaplus = db.session.query(db.func.sum(szydelko.kasaplus)).scalar()
+    sumakoniec = suma-kasaminus+kasaplus
+    return render_template("info.html", lista=lista, sumakoniec=sumakoniec)
 
-    
 
 
 if __name__ == "__main__":

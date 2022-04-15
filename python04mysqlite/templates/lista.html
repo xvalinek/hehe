@@ -2,8 +2,10 @@
 {% block title%}LISTA UŻYTKOWNIKÓW{% endblock %}
 {% block content %}
 <h1>LISTA UŻYTKOWNIKÓW</h1>
+<div id="lista">
 {% for i in lista %}
     
     <li>Login: {{i.login}}       Email: {{i.email}}       Password: {{i.password}}</li><br>
 {% endfor %}
+</div>
 {% endblock %}
