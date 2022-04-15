@@ -1,13 +1,20 @@
 {% extends "base.html" %}
 {% block title%}LISTA UŻYTKOWNIKÓW{% endblock %}
 {% block content %}
-<h1>INFORMACJE</h1>
+<header>INFORMACJE</header>
 
+<div id="lista">
 {% for i in lista %}
     
-    <li>Nazwa: {{i.nazwa}}       Cena: {{i.cena}}       Ilość: {{i.ilosc}}       Wartość Całkowita: {{i.wartosc_calkowita}}</li><br>
+    <li>Numer: {{i._id}}       <ol>Nazwa: {{i.nazwa}}</ol>       <ol>Cena: {{i.cena}}.zł</ol>      <ol>Ilość: {{i.ilosc}} szt</ol>      <ol>Wartość Całkowita: {{i.wartosc_calkowita}}.zł</ol>        <ol>Kasa na plus: {{i.kasaplus}}.zł</ol>        <ol>Kasa na minus: {{i.kasaminus}}.zł</ol></li><br>
 {% endfor %}
-
+</div>
+<div id="wroc">
     <button type="button" onclick="window.location.href='{{ url_for( 'index' ) }}';" name="buttreg">Strona Główna</button>
-    SUMA: {{suma}}
+</div>
+<div id="suma">
+    <p id="sumakoniec">
+    SUMA: {{sumakoniec}}.zł
+    </p>
+</div>
 {% endblock %}

@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+header{
+    background-color: #9EC1A3;
+    font-size: 35px;
+    padding: 5px;
+}
+body{
+    background-color: #CFE0C3;
+    text-align: center;
+}   
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #40798C;
+    border: 2px solid black;
+    width: 120px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  button {
+    background-color: #40798C;
+    border: 2px solid black;
+    width: 120px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  input[type=text], input[type=number], input[type=list]{
+    background-color: #70A9A1;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  #essa{
+    background-color: #70A9A1;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+  }
+  ::placeholder { 
+    color: #40798C;
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder { 
+    color: #40798C;
+  }
+  
+  ::-ms-input-placeholder { 
+    color: #40798C;
+  }
+li{
+    border: 1px solid black;
+    width: 60%;
+}
+#lista{
+    margin-left:28%;
+    margin-top: 20px;
+}
+#wroc{
+    position: absolute;
+    top: 50px;
+    left: 5px;
+}
+#suma{
+    width: 150px;
+    height: 46px;
+    position: absolute;
+    top: 50px;
+    left: 135px;
+    border: 2px solid black;
+    background-color: #40798C;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#sumakoniec{
+    position: absolute;
+    padding: 10 px;
+    font-size: 16px;
+}

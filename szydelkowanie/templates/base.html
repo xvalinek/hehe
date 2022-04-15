@@ -5,10 +5,8 @@
     <script src="{{ url_for('static', filename='script.js')}}"></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
-<body>
-    <div id="gradient">
+
     {% block content %}
     {% endblock %}
-</div>
-</body>
+
 </html>

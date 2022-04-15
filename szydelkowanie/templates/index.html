@@ -2,9 +2,11 @@
 {% block title%}STRONA GŁÓWNA{% endblock %}
 {% block content %}
         <header>
+        
+        
+            <p id="strona">STRONA GŁÓWNA</p>
         </header>
         <body>
-            <p id="strona">STRONA GŁÓWNA</p>
             <form method="POST" action=""> 
                     <input list="nazwaa" name="nazwa" id="essa" placeholder="Wybierz">
                     <datalist id="nazwaa">
@@ -19,15 +21,20 @@
                     <br>
                  <input type="number" name="cena" placeholder="Cena" />
                 <br>
-                 <input type="number" name="ilosc" placeholder="Ilość" />
+                    <input type="number" name="ilosc" placeholder="Ilość" />
+                <br>
+                    <input type="number" name="kasaplus" placeholder="Pieniądze dodane" />
+                <br>
+                    <input type="number" name="kasaminus" placeholder="Pieniądze odjęte" />
                 <br>
                 <input type="submit">
+                <button type="button" onclick="window.location.href='{{ url_for( 'info' ) }}';" name="buttreg">Informacje</button>
+
                
             </form>
 
         
-                <button type="button" onclick="window.location.href='{{ url_for( 'info' ) }}';" name="buttreg">Informacje</button>
-
+                
             </body> 
 
 {% endblock %}  
