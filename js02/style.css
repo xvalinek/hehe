@@ -1,0 +1,22 @@
+body{
+    font-family: sans-serif;
+}
+.board{
+    width: 306px;
+    background: #f0f0f0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 3px;
+    display: grid;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.box{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background: #fafafa;
+}
